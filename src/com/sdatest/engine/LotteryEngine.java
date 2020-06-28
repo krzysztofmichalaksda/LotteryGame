@@ -37,4 +37,16 @@ public class LotteryEngine {
         Random random = new Random();
         return random.nextInt(end - start + 1) + start;
     }
+
+    public int getCountOfCorrectTypes(int[] randomNums, int[] userNums)
+    {
+        int counter = 0;
+        for (int userType : userNums) {
+            if (ArrayHelper.isNumberExists(randomNums, userType)) {
+                counter++;
+            }
+        }
+
+        return counter;
+    }
 }

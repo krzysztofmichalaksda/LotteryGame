@@ -15,8 +15,11 @@ public class Main {
         int[] userNumbers = ConsoleInput.getUserNumbers(count);
         System.out.println("Twoje wytypowane liczby: " + Arrays.toString(userNumbers));
 
-        LotteryEngine lottery = new LotteryEngine(1, 20, count);
+        LotteryEngine lottery = new LotteryEngine(1, 6, count);
         int[] randomNumbers = lottery.getMultipleInts();
         System.out.println("Wylosowane liczby: " + Arrays.toString(randomNumbers));
+
+        int correctTypes = lottery.getCountOfCorrectTypes(randomNumbers, userNumbers);
+        System.out.println("Liczba poprawnie wytypowanych wartości to: " + correctTypes);
     }
 }
