@@ -1,5 +1,7 @@
 package com.sdatest.engine;
 
+import com.sdatest.utils.ArrayHelper;
+
 import java.util.Arrays;
 import java.util.Random;
 
@@ -23,7 +25,7 @@ public class LotteryEngine {
             int randomNumber;
             do {
                 randomNumber = getRandomNumber();
-            } while (Arrays.binarySearch(randomNumbers, randomNumber) > -1);
+            } while (ArrayHelper.isNumberExists(randomNumbers, randomNumber));
             randomNumbers[i] = randomNumber;
         }
 
