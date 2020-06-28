@@ -17,12 +17,13 @@ public class LotteryEngine {
     public int[] getMultipleInts()
     {
         int[] randomNumbers = new int[count];
+
         for (int i = 0; i < randomNumbers.length; i++)
         {
             int randomNumber;
-
-            randomNumber = getRandomNumber();
-
+            do {
+                randomNumber = getRandomNumber();
+            } while (Arrays.binarySearch(randomNumbers, randomNumber) > -1);
             randomNumbers[i] = randomNumber;
         }
 
@@ -32,6 +33,6 @@ public class LotteryEngine {
     public int getRandomNumber()
     {
         Random random = new Random();
-        return random.nextInt(end + 1 - start) + start;
+        return random.nextInt(end - start + 1) + start;
     }
 }
