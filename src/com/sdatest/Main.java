@@ -16,7 +16,7 @@ public class Main {
         System.out.println(TITLE);
         // Pobranie danych od użytkownika.
         User user1 = ConsoleInput.getUserData();
-        user1.welcome();
+        System.out.println(user1.welcome());
 
         // Pobranie wytypowanych liczb od użytkownika.
         System.out.printf("Podaj %d liczby z zakresu [%d - %d]:\n", COUNT_NUMBER, MIN_NUMBER, MAX_NUMBER);

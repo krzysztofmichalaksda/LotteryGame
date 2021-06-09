@@ -10,9 +10,8 @@ public class User {
         this.lastName = lastName;
     }
 
-    public void welcome()
+    public String welcome()
     {
-        System.out.println("Dzień dobry " + name + " " + lastName + "!");
-        System.out.println("Życze szczęścia i wysokich wygranych!");
+        return "Dzień dobry " + name + " " + lastName + "!";
     }
 }
