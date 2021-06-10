@@ -19,7 +19,7 @@ public class Main {
         do {
             user1 = ConsoleInput.getUserData();
             System.out.println(user1.welcome());
-        } while (user1.welcome() == "Niepoprawne dane");
+        } while (user1.welcome().equals("Niepoprawne dane"));
 
         // Pobranie wytypowanych liczb od użytkownika.
         System.out.printf("Podaj %d liczby z zakresu [%d - %d]:\n", COUNT_NUMBER, MIN_NUMBER, MAX_NUMBER);
