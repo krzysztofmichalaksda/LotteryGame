@@ -15,8 +15,11 @@ public class Main {
     public static void main(String[] args) {
         System.out.println(TITLE);
         // Pobranie danych od użytkownika.
-        User user1 = ConsoleInput.getUserData();
-        user1.welcome();
+        User user1;
+        do {
+            user1 = ConsoleInput.getUserData();
+            System.out.println(user1.welcome());
+        } while (user1.welcome() == "Niepoprawne dane");
 
         // Pobranie wytypowanych liczb od użytkownika.
         System.out.printf("Podaj %d liczby z zakresu [%d - %d]:\n", COUNT_NUMBER, MIN_NUMBER, MAX_NUMBER);
